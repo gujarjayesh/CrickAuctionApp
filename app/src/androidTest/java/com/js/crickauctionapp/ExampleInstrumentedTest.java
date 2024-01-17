@@ -1,4 +1,4 @@
-package com.icspl.crickauctionapp;
+package com.js.crickauctionapp;
 
 import android.content.Context;
 
