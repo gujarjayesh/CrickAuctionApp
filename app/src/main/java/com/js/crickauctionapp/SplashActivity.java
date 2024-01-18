@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.icspl.crickauctionapp.R;
+import com.js.crickauctionapp.HomeScreen.HomeActivity;
 import com.js.crickauctionapp.RegisterActivity.RegistrationActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -42,7 +43,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // Start the main activity after the splash timeout
-                Intent intent = new Intent(SplashActivity.this, RegistrationActivity.class);
+                Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             }
