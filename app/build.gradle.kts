@@ -36,6 +36,12 @@ dependencies {
 
     // Lottie Animation ----
     implementation("com.airbnb.android:lottie:4.0.0")
+
+    // ViewPager ----
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    // Rounded Image ----
+    implementation("com.makeramen:roundedimageview:2.3.0")
     
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

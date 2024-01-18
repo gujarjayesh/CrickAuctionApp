@@ -8,6 +8,16 @@
     android:background="@color/background"
     tools:context="com.js.crickauctionapp.HomeScreen.HomeActivity">
 
+    
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerImageSlider"
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:layout_height="300dp"
+        />
+
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/create_auction_card"
         android:layout_width="match_parent"
