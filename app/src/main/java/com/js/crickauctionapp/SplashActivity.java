@@ -6,6 +6,7 @@ import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.widget.ImageView;
@@ -21,7 +22,9 @@ public class SplashActivity extends AppCompatActivity {
     TextView splashCrikAutionTxt;
     ObjectAnimator animator;
     LottieAnimationView splashHammer;
-    private static final int SPLASH_TIMEOUT = 5000;
+    private static final int SPLASH_TIMEOUT = 2500;
+    private static final int SPLASH_TIMEOUT_HAMMER = 1000;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +53,15 @@ public class SplashActivity extends AppCompatActivity {
         super.onStart();
 
         animator = ObjectAnimator.ofFloat(splashCrikAutionTxt, "translationY", -1050f);
-        animator.setDuration(2000);
+        animator.setDuration(1000);
         animator.start();
-        splashHammer.animate().getStartDelay();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                splashHammer.setVisibility(View.VISIBLE);
+                splashHammer.playAnimation();
+            }
+        }, SPLASH_TIMEOUT_HAMMER);
+
     }
 }
