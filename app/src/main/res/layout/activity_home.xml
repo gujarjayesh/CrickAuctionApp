@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
     android:background="@color/background"
     tools:context="com.js.crickauctionapp.HomeScreen.HomeActivity">
 
@@ -14,7 +12,7 @@
         android:id="@+id/create_auction_card"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_180sdp"
-        app:cardElevation="@dimen/_5sdp"
+        app:cardElevation="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_20sdp"
@@ -28,27 +26,28 @@
                 android:id="@+id/create_auction_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_180sdp"
-                android:layout_marginStart="@dimen/_70sdp"
-                android:padding="@dimen/_10sdp"
-                android:src="@drawable/create_auction"
+                android:src="@drawable/create_auction_bg"
                 android:scaleType="centerCrop"/>
 
                 <TextView
                     android:id="@+id/create_tv"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Create"
-                    android:textColor="@color/black"
+                    android:shadowColor="@color/black"
+                    android:shadowRadius="10"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/lemon_regular"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:textSize="@dimen/_20sdp"/>
                 <TextView
-
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Auction"
-                    android:textColor="@color/black"
+                    android:shadowColor="@color/black"
+                    android:shadowRadius="10"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/lemon_regular"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_below="@+id/create_tv"
@@ -65,7 +64,7 @@
         android:id="@+id/creditedCardBtn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_180sdp"
-        app:cardElevation="@dimen/_5sdp"
+        app:cardElevation="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_20sdp"
@@ -79,8 +78,7 @@
                 android:id="@+id/auction_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_180sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:src="@drawable/join_auction_new"
+                android:src="@drawable/join_auction"
                 android:scaleType="centerCrop"/>
 
             <TextView
@@ -88,17 +86,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Join"
-                android:textColor="@color/black"
+                android:shadowColor="@color/black"
+                android:shadowRadius="10"
+                android:textColor="@color/white"
                 android:fontFamily="@font/lemon_regular"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:textSize="@dimen/_20sdp"/>
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Auction"
-                android:textColor="@color/black"
+                android:shadowColor="@color/black"
+                android:shadowRadius="10"
+                android:textColor="@color/white"
                 android:fontFamily="@font/lemon_regular"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_below="@+id/join_tv"
