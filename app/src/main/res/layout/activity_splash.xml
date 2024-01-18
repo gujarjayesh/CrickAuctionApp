@@ -1,24 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.js.crickauctionapp.SplashActivity">
-    <LinearLayout
+
+
+    <ImageView
+        android:id="@+id/autionSplashImg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:src="@drawable/splashcreen"
+        android:scaleType="fitXY"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/autionsplashup"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/autionsplashbottom"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        />
     <TextView
+        android:id="@+id/splashCrikAutionTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CrikAuction"
+        android:textSize="50dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lemon_regular"
+        android:elevation="50dp"
+        android:shadowRadius="20"
+        android:shadowColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splashHammer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AUTION"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="30dp"
-        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/autionhammer"
         />
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
