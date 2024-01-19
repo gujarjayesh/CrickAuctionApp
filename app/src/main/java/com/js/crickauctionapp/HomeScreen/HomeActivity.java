@@ -7,11 +7,14 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
+import com.google.android.material.card.MaterialCardView;
 import com.icspl.crickauctionapp.R;
+import com.js.crickauctionapp.CreateAuctionScreens.CreateAuctionActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     private ViewPager2 viewPager2;
     private Handler SliderHandler = new Handler();
 
+    MaterialCardView create_auction_card;
     SliderAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         viewPager2 = findViewById(R.id.viewPagerImageSlider);
+        create_auction_card = findViewById(R.id.create_auction_card);
 
         List<SliderItem> sliderItems = new ArrayList<>();
         sliderItems.add(new SliderItem(R.drawable.create_auction));
@@ -56,6 +61,14 @@ public class HomeActivity extends AppCompatActivity {
                 super.onPageSelected(position);
                 SliderHandler.removeCallbacks(sliderRunnable);
                 SliderHandler.postDelayed(sliderRunnable,3000);
+            }
+        });
+
+        create_auction_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CreateAuctionActivity.class);
+                startActivity(intent);
             }
         });
     }
