@@ -26,7 +26,18 @@
             android:paddingEnd="@dimen/_20sdp"
             android:layout_height="250dp"
             />
-        <com.google.android.material.card.MaterialCardView
+            <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dot3"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:dotsColor="@android:color/holo_blue_light"
+                app:selectedDotColor="@android:color/holo_blue_dark"
+                app:dotsSize="15dp"
+                app:dotsSpacing="5dp"/>
+
+            <com.google.android.material.card.MaterialCardView
             android:id="@+id/create_auction_card"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_180sdp"

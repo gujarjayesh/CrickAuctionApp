@@ -48,6 +48,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     //Responsive UI
     implementation("com.intuit.sdp:sdp-android:1.1.0")
+    //Image SliderDots ----
+    implementation("com.tbuonomo:dotsindicator:5.0")
+
 
 
 }
